@@ -11,9 +11,3 @@ document.getElementById('form-contato').addEventListener('submit', function(even
         document.getElementById('feedback').innerText = 'Por favor, preencha todos os campos.';
     }
 });
-
-// Função para alternar a visibilidade do menu ao clicar no ícone
-function toggleMenu() {
-    const nav = document.querySelector('header nav');
-    nav.classList.toggle('active');
-}
