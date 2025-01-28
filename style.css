@@ -1,4 +1,4 @@
-/* Reset e Estilo Básico */
+/* Reset e Estilo Básico */ 
 * {
     margin: 0;
     padding: 0;
@@ -12,20 +12,6 @@ body {
     line-height: 1.6;
 }
 
-h2, h3 {
-    font-family: 'Arial', sans-serif;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #f7d347;
-}
-
 /* Cabeçalho */
 header {
     background-color: #333;
@@ -34,11 +20,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 header .logo img {
     max-width: 150px;
     height: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul {
@@ -53,8 +46,78 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+header nav ul li a:hover {
+    color: #f7d347;
+}
+
+/* Menu Hambúrguer para Mobile */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+header nav ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header .logo img {
+        max-width: 120px;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 1.5em;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Mostrar menu ao clicar no ícone */
+    header nav.active ul {
+        display: flex;
+    }
+}
+
+/* Transição para o menu */
+header nav ul li a {
+    transition: color 0.3s ease;
+}
+
+/* Ajuste de estilo para o menu no mobile */
 header nav ul li a:hover {
     color: #f7d347;
 }
