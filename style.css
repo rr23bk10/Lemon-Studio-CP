@@ -318,7 +318,7 @@ footer a:hover {
 
     #descricao-missao-visao .missao, 
     #descricao-missao-visao .visao {
-        max-width: 100%;
+        max-width: 150%;
         margin-bottom: 20px;
     }
 }
