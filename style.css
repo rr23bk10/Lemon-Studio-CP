@@ -93,6 +93,10 @@ header nav ul {
         box-sizing: border-box;
     }
 
+    header nav.active ul {
+        display: flex;
+    }
+
     header nav ul li {
         margin-right: 0;
         margin-bottom: 10px;
@@ -105,11 +109,6 @@ header nav ul {
     .menu-icon {
         display: block;
     }
-
-    /* Mostrar menu ao clicar no ícone */
-    header nav.active ul {
-        display: flex;
-    }
 }
 
 /* Transição para o menu */
@@ -121,7 +120,6 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #f7d347;
 }
-
 
 /* Animações */
 @keyframes typing {
@@ -394,25 +392,7 @@ footer a:hover {
         margin-bottom: 20px;
     }
 
-    #home .content h2 {
-        font-size: 35px;
-    }
-
-    #home .content p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 600px) {
-    .servicos-container {
+    #servicos .servicos-container {
         grid-template-columns: 1fr;
-    }
-
-    #home .content h2 {
-        font-size: 28px;
-    }
-
-    #home .content p {
-        font-size: 16px;
     }
 }
