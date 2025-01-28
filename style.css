@@ -1,4 +1,4 @@
-/* Reset e estilo básico */
+/* Reset e Estilo Básico */
 * {
     margin: 0;
     padding: 0;
@@ -19,17 +19,21 @@ h2, h3 {
 a {
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f7d347;
 }
 
 /* Cabeçalho */
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
 }
 
 header .logo img {
@@ -49,11 +53,10 @@ header nav ul li {
 header nav ul li a {
     color: #fff;
     font-size: 1.2em;
-    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #f7d347; /* Cor para o hover */
+    color: #f7d347;
 }
 
 /* Animações */
@@ -89,8 +92,8 @@ header nav ul li a:hover {
     align-items: center;
     text-align: center;
     color: white;
-    padding: 0 20px;
     position: relative;
+    padding: 0 20px;
 }
 
 #home .content h2 {
@@ -157,20 +160,6 @@ header nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    #descricao-missao-visao .missao-visao {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #descricao-missao-visao .missao, 
-    #descricao-missao-visao .visao {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
 /* Seção Serviços */
 #servicos {
     padding: 40px;
@@ -211,20 +200,7 @@ header nav ul li a:hover {
 }
 
 .servico:hover {
-    transform: translateY(-10px); /* Efeito de elevação no hover */
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-    .servicos-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .servicos-container {
-        grid-template-columns: 1fr;
-    }
+    transform: translateY(-10px);
 }
 
 /* Seção Contato */
@@ -321,9 +297,34 @@ footer p {
 footer a {
     color: #f7d347;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 footer a:hover {
     color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #descricao-missao-visao .missao-visao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #descricao-missao-visao .missao, 
+    #descricao-missao-visao .visao {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
 }
