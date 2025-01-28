@@ -1,4 +1,4 @@
-/* Reset e Estilo Básico */
+/* Reset e Estilo Básico */ 
 * {
     margin: 0;
     padding: 0;
@@ -68,7 +68,10 @@ header nav ul li a:hover {
     margin: 5px 0;
 }
 
-/* Mostrar menu em telas menores */
+header nav ul {
+    display: flex;
+}
+
 @media (max-width: 768px) {
     header {
         padding: 15px 20px;
@@ -78,7 +81,6 @@ header nav ul li a:hover {
         max-width: 120px;
     }
 
-    /* Inicialmente, o menu fica oculto */
     header nav ul {
         display: none;
         flex-direction: column;
@@ -91,12 +93,6 @@ header nav ul li a:hover {
         box-sizing: border-box;
     }
 
-    /* Mostrar o menu quando a classe 'active' for adicionada */
-    header nav.active ul {
-        display: flex;
-    }
-
-    /* Estilos para cada item do menu no mobile */
     header nav ul li {
         margin-right: 0;
         margin-bottom: 10px;
@@ -106,9 +102,13 @@ header nav ul li a:hover {
         font-size: 1.5em;
     }
 
-    /* Exibir o ícone do menu */
     .menu-icon {
         display: block;
+    }
+
+    /* Mostrar menu ao clicar no ícone */
+    header nav.active ul {
+        display: flex;
     }
 }
 
@@ -121,6 +121,7 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #f7d347;
 }
+
 
 /* Animações */
 @keyframes typing {
@@ -354,26 +355,64 @@ footer {
 }
 
 footer p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #222;
-        color: #ccc;
+footer a {
+    color: #f7d347;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .servicos-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    header {
-        background-color: #444;
+    #home .content h2 {
+        font-size: 40px;
     }
 
-    footer {
-        background-color: #444;
+    #home .content p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #descricao-missao-visao .missao-visao {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .servico {
-        background-color: #333;
-        color: #ccc;
+    #descricao-missao-visao .missao, 
+    #descricao-missao-visao .visao {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #home .content h2 {
+        font-size: 35px;
+    }
+
+    #home .content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+    #home .content h2 {
+        font-size: 28px;
+    }
+
+    #home .content p {
+        font-size: 16px;
     }
 }
