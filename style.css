@@ -1,4 +1,4 @@
-/* Reset e Estilo Básico */ 
+/* Reset e Estilo Básico */
 * {
     margin: 0;
     padding: 0;
@@ -68,10 +68,7 @@ header nav ul li a:hover {
     margin: 5px 0;
 }
 
-header nav ul {
-    display: flex;
-}
-
+/* Mostrar menu em telas menores */
 @media (max-width: 768px) {
     header {
         padding: 15px 20px;
@@ -81,6 +78,7 @@ header nav ul {
         max-width: 120px;
     }
 
+    /* Inicialmente, o menu fica oculto */
     header nav ul {
         display: none;
         flex-direction: column;
@@ -93,10 +91,12 @@ header nav ul {
         box-sizing: border-box;
     }
 
+    /* Mostrar o menu quando a classe 'active' for adicionada */
     header nav.active ul {
         display: flex;
     }
 
+    /* Estilos para cada item do menu no mobile */
     header nav ul li {
         margin-right: 0;
         margin-bottom: 10px;
@@ -106,6 +106,7 @@ header nav ul {
         font-size: 1.5em;
     }
 
+    /* Exibir o ícone do menu */
     .menu-icon {
         display: block;
     }
@@ -353,46 +354,26 @@ footer {
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
-footer a {
-    color: #f7d347;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #fff;
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-    .servicos-container {
-        grid-template-columns: repeat(2, 1fr);
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+        color: #ccc;
     }
 
-    #home .content h2 {
-        font-size: 40px;
+    header {
+        background-color: #444;
     }
 
-    #home .content p {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    #descricao-missao-visao .missao-visao {
-        flex-direction: column;
-        align-items: center;
+    footer {
+        background-color: #444;
     }
 
-    #descricao-missao-visao .missao, 
-    #descricao-missao-visao .visao {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #servicos .servicos-container {
-        grid-template-columns: 1fr;
+    .servico {
+        background-color: #333;
+        color: #ccc;
     }
 }
