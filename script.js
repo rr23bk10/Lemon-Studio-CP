@@ -1,26 +1,32 @@
-document.getElementById('form-contato').addEventListener('submit', function(event) {
-    event.preventDefault();
+// script.js
 
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
-
-    if (nome && email && mensagem) {
-        document.getElementById('feedback').innerText = `Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`;
-    } else {
-        document.getElementById('feedback').innerText = 'Por favor, preencha todos os campos.';
-    }
-});
-
+// Função para alternar o menu mobile
 function toggleMenu() {
     const nav = document.querySelector('header nav');
-    nav.classList.toggle('active'); // Isso alterna entre exibir e esconder o menu
+    nav.classList.toggle('active');
 }
 
-document.querySelectorAll('header nav ul li a').forEach(item => {
-    item.addEventListener('click', () => {
-        const nav = document.querySelector('header nav');
-        nav.classList.remove('active'); // Fecha o menu ao clicar em qualquer link
-    });
-});
+// Função para validar o formulário
+function validateForm() {
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
 
+    if (nome === "" || email === "" || mensagem === "") {
+        alert("Por favor, preencha todos os campos.");
+        return false;
+    }
+
+    if (!validateEmail(email)) {
+        alert("Por favor, insira um e-mail válido.");
+        return false;
+    }
+
+    return true;
+}
+
+// Função para validar e-mail
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}

@@ -1,4 +1,4 @@
-/* Reset e Estilo Básico */ 
+/* Reset e Estilo Básico */
 * {
     margin: 0;
     padding: 0;
@@ -68,19 +68,7 @@ header nav ul li a:hover {
     margin: 5px 0;
 }
 
-header nav ul {
-    display: flex;
-}
-
 @media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-    }
-
-    header .logo img {
-        max-width: 120px;
-    }
-
     header nav ul {
         display: none;
         flex-direction: column;
@@ -98,51 +86,13 @@ header nav ul {
         margin-bottom: 10px;
     }
 
-    header nav ul li a {
-        font-size: 1.5em;
-    }
-
     .menu-icon {
         display: block;
     }
 
-    /* Mostrar menu ao clicar no ícone */
     header nav.active ul {
         display: flex;
     }
-}
-
-/* Transição para o menu */
-header nav ul li a {
-    transition: color 0.3s ease;
-}
-
-/* Ajuste de estilo para o menu no mobile */
-header nav ul li a:hover {
-    color: #f7d347;
-}
-
-
-/* Animações */
-@keyframes typing {
-    0% { width: 0; }
-    100% { width: 100%; }
-}
-
-@keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #fff; }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes highlightText {
-    0% { color: #f7d347; }
-    50% { color: #ff6600; }
-    100% { color: #f7d347; }
 }
 
 /* Seção Home */
@@ -185,7 +135,29 @@ header nav ul li a:hover {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
-/* Seção Descrição - Missão e Visão */
+/* Animações */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes highlightText {
+    0% { color: #f7d347; }
+    50% { color: #ff6600; }
+    100% { color: #f7d347; }
+}
+
+/* Seção Sobre */
 #descricao-missao-visao {
     background-color: #fff;
     padding: 60px 20px;
@@ -367,52 +339,25 @@ footer a:hover {
     color: #fff;
 }
 
+.social-links img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
 /* Responsividade */
 @media (max-width: 1024px) {
     .servicos-container {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    #home .content h2 {
-        font-size: 40px;
-    }
-
-    #home .content p {
-        font-size: 20px;
-    }
 }
 
 @media (max-width: 768px) {
-    #descricao-missao-visao .missao-visao {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #descricao-missao-visao .missao, 
-    #descricao-missao-visao .visao {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #home .content h2 {
-        font-size: 35px;
-    }
-
-    #home .content p {
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 600px) {
     .servicos-container {
         grid-template-columns: 1fr;
-    }
-
-    #home .content h2 {
-        font-size: 28px;
-    }
-
-    #home .content p {
-        font-size: 16px;
     }
 }
