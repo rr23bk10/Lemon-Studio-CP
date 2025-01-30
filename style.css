@@ -97,7 +97,7 @@ header nav ul li a:hover {
 
 /* Seção Home */
 #home {
-    background-image: url('images/fundo2.webp');
+    background-image: url('images/fundo2.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -135,6 +135,28 @@ header nav ul li a:hover {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
+/* Animações */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #fff; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes highlightText {
+    0% { color: #f7d347; }
+    50% { color: #ff6600; }
+    100% { color: #f7d347; }
+}
+
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     #home .content h2 {
@@ -159,40 +181,6 @@ header nav ul li a:hover {
     #home .content p {
         font-size: 16px; /* Tamanho ainda menor para telas muito pequenas */
     }
-}
-
-#home .content p {
-    font-size: 22px;
-    margin-top: 20px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    opacity: 0;
-    animation: fadeIn 1s 6s forwards, highlightText 2s infinite alternate;
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
-}
-
-/* Animações */
-@keyframes typing {
-    0% { width: 0; }
-    100% { width: 100%; }
-}
-
-@keyframes blink {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #fff; }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@keyframes highlightText {
-    0% { color: #f7d347; }
-    50% { color: #ff6600; }
-    100% { color: #f7d347; }
 }
 
 /* Seção Sobre */
