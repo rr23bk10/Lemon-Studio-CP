@@ -97,7 +97,7 @@ header nav ul li a:hover {
 
 /* Seção Home */
 #home {
-    background-image: url('images/fundo2.jpg');
+    background-image: url('images/fundo2.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -339,14 +339,15 @@ footer a:hover {
     color: #fff;
 }
 
-.social-links img {
-    width: 30px;
+.social-links a {
+    color: #fff;
+    font-size: 24px;
     margin: 0 10px;
-    transition: transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.social-links img:hover {
-    transform: scale(1.2);
+.social-links a:hover {
+    color: #f7d347;
 }
 
 /* Responsividade */
