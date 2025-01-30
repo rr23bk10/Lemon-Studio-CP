@@ -97,7 +97,7 @@ header nav ul li a:hover {
 
 /* Seção Home */
 #home {
-    background-image: url('images/fundo2.jpg');
+    background-image: url('images/fundo2.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -121,6 +121,44 @@ header nav ul li a:hover {
     animation: typing 4s steps(40) 1s forwards, blink 0.7s step-end infinite;
     color: #f7d347;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#home .content p {
+    font-size: 22px;
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: fadeIn 1s 6s forwards, highlightText 2s infinite alternate;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    #home .content h2 {
+        font-size: 30px; /* Tamanho menor para telas pequenas */
+        white-space: nowrap; /* Mantém o texto em uma linha */
+        overflow: hidden; /* Garante que o texto não ultrapasse a tela */
+        width: 0; /* Reinicia a largura para a animação */
+        animation: typing 3s steps(30) 1s forwards, blink 0.7s step-end infinite; /* Ajusta a animação */
+    }
+
+    #home .content p {
+        font-size: 18px; /* Tamanho menor para telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    #home .content h2 {
+        font-size: 24px; /* Tamanho ainda menor para telas muito pequenas */
+        animation: typing 2.5s steps(25) 1s forwards, blink 0.7s step-end infinite; /* Ajusta a animação */
+    }
+
+    #home .content p {
+        font-size: 16px; /* Tamanho ainda menor para telas muito pequenas */
+    }
 }
 
 #home .content p {
