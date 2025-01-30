@@ -135,6 +135,7 @@ header nav ul li a:hover {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
+
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     #home .content h2 {
