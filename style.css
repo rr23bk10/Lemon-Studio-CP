@@ -135,6 +135,31 @@ header nav ul li a:hover {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
 }
 
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+    #home .content h2 {
+        font-size: 30px; /* Tamanho menor para telas pequenas */
+        white-space: normal; /* Remove a animação de digitação */
+        border-right: none; /* Remove a borda de digitação */
+        animation: none; /* Remove a animação */
+    }
+
+    #home .content p {
+        font-size: 18px; /* Tamanho menor para telas pequenas */
+        animation: none; /* Remove a animação */
+    }
+}
+
+@media (max-width: 480px) {
+    #home .content h2 {
+        font-size: 24px; /* Tamanho ainda menor para telas muito pequenas */
+    }
+
+    #home .content p {
+        font-size: 16px; /* Tamanho ainda menor para telas muito pequenas */
+    }
+}
+
 /* Animações */
 @keyframes typing {
     0% { width: 0; }
