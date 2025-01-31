@@ -97,7 +97,7 @@ header nav ul li a:hover {
 
 /* Seção Home */
 #home {
-    background-image: url('images/fundo2.jpg');
+    background-image: url('images/fundo2.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -155,32 +155,6 @@ header nav ul li a:hover {
     0% { color: #f7d347; }
     50% { color: #ff6600; }
     100% { color: #f7d347; }
-}
-
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-    #home .content h2 {
-        font-size: 30px; /* Tamanho menor para telas pequenas */
-        white-space: nowrap; /* Mantém o texto em uma linha */
-        overflow: hidden; /* Garante que o texto não ultrapasse a tela */
-        width: 0; /* Reinicia a largura para a animação */
-        animation: typing 3s steps(30) 1s forwards, blink 0.7s step-end infinite; /* Ajusta a animação */
-    }
-
-    #home .content p {
-        font-size: 18px; /* Tamanho menor para telas pequenas */
-    }
-}
-
-@media (max-width: 480px) {
-    #home .content h2 {
-        font-size: 24px; /* Tamanho ainda menor para telas muito pequenas */
-        animation: typing 2.5s steps(25) 1s forwards, blink 0.7s step-end infinite; /* Ajusta a animação */
-    }
-
-    #home .content p {
-        font-size: 16px; /* Tamanho ainda menor para telas muito pequenas */
-    }
 }
 
 /* Seção Sobre */
@@ -262,6 +236,43 @@ header nav ul li a:hover {
 }
 
 .servico:hover {
+    transform: translateY(-10px);
+}
+
+/* Seção Galeria de Empresas Atendidas */
+#galeria {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#galeria h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.galeria-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.galeria-item:hover {
     transform: translateY(-10px);
 }
 
@@ -354,15 +365,21 @@ footer {
 
 footer p {
     font-size: 14px;
+    margin: 10px 0;
 }
 
 footer a {
     color: #f7d347;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
     color: #fff;
+}
+
+.social-links {
+    margin-top: 10px;
 }
 
 .social-links a {
@@ -385,6 +402,16 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .servicos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-container {
         grid-template-columns: 1fr;
     }
 }
