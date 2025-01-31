@@ -97,7 +97,7 @@ header nav ul li a:hover {
 
 /* Seção Home */
 #home {
-    background-image: url('images/fundo2.jpg');
+    background-image: url('images/fundo2.webp');
     background-size: cover;
     background-position: center;
     height: 100vh;
